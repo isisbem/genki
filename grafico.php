@@ -5,7 +5,7 @@
 session_start();
 echo '<head>';
 echo '<body>';
-@include("dati_db.php");
+@include("dati_db_ro.php");
 if (!$link = new mysqli($locadb,$userdb,$passdb,$nomedb))
 if ($link->connect_errno) {
     echo 'Failed to connect to MySQL: (' . $link->connect_errno . ') ' . $link->connect_error;
@@ -18,7 +18,7 @@ $press==array();
 $tutto_js='';
 $ii=1;
 
-// parametro da leggere (verrà gestito dalla selezione delle 19 metriche disponibili
+// parametro da leggere (verrÃ  gestito dalla selezione delle 17 metriche disponibili
 $param="CO2";
 
 // legge la descrizione della metrica dal DB
@@ -54,7 +54,7 @@ echo '</body>';
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
 
-// codice di produzione del grafico a partire dalle google chart il cui funzionamento andrebbe approfondita per plottare più dati e aggiungere eventi ed altro
+// codice di produzione del grafico a partire dalle google chart il cui funzionamento andrebbe approfondita per plottare piÃ¹ dati e aggiungere eventi ed altro
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawCurveTypes);
 
