@@ -1,6 +1,6 @@
 <?php
 
-$appName = 'Genki O Quello Che e';
+$appName = 'Progetto Lorem Ipsum';
 $appVersion = 'v1.0.0';
 
 $serverName = '82.223.8.163';

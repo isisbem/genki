@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Genki Management Panel</title>
+        <title><?php echo $appName ?></title>
         <!-- <link rel="shortcut icon" type="image/x-icon" href="media/icon.png" /> -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.css">
     </head>
@@ -12,62 +12,41 @@
             <div class="row d-flex flex-column min-vh-100 justify-content-center align-items-center">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h4 class="card-title text-center">Grafico in tempo reale</h4>
+                        <h2 class="card-title text-center"><?php echo $appName ?></h2>
                         <hr>
-                        <canvas id="graph"></canvas>
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded-3 shadow-sm">
+                                        <div class="carousel-item active">
+                                            <img src="http://genkiproject.org/wp-content/uploads/2020/11/Genki_gorizia.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <!-- <div class="carousel-item">
+                                            <img src="http://genkiproject.org/wp-content/uploads/2019/03/image-2-768x404.png" class="d-block w-100" alt="...">
+                                        </div> -->
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <!-- <img src="https://genkiproject.org/wp-content/uploads/2020/11/Genki_gorizia.jpg" class="img-fluid rounded-3 float-start shadow-sm"> -->
+                                <small class="text-muted float-end">Fonte: <a href="http://genkiproject.org" target="_blank">Genki Project</a></small>
+                            </div>
+                            <div class="col">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatibus natus dolorum sed tempore nesciunt, quasi rerum quas aliquid ad ut quis vitae. Mollitia illo dolore adipisci nulla animi! Dolorem!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.bundle.min.js"></script>
-        <script>
-            var ctx = document.getElementById('graph');
-            var graph = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    // datasets: [{
-                    //     label: '# of Votes',
-                    //     data: [12, 19, 3, 5, 2, 3],
-                    //     backgroundColor: [
-                    //         'rgba(255, 99, 132, 0.2)',
-                    //         'rgba(54, 162, 235, 0.2)',
-                    //         'rgba(255, 206, 86, 0.2)',
-                    //         'rgba(75, 192, 192, 0.2)',
-                    //         'rgba(153, 102, 255, 0.2)',
-                    //         'rgba(255, 159, 64, 0.2)'
-                    //     ],
-                    //     borderColor: [
-                    //         'rgba(255, 99, 132, 1)',
-                    //         'rgba(54, 162, 235, 1)',
-                    //         'rgba(255, 206, 86, 1)',
-                    //         'rgba(75, 192, 192, 1)',
-                    //         'rgba(153, 102, 255, 1)',
-                    //         'rgba(255, 159, 64, 1)'
-                    //     ],
-                    //     borderWidth: 1
-                    // }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
-                }
-            });
-
-            $.get('php/get_data.php', function (data) {
-                data.forEach(function (v, i) {
-                    // graph.data.labels = 
-                    graph.data.datasets.push({
-                        label: v
-                    })
-                })
-                graph.update()
-            }, 'json')
-            </script>
     </body>
 </html>
