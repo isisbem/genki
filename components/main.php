@@ -34,7 +34,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : '' ?>" aria-current="page" href="about.php">Informazioni</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'active' : '' ?>" aria-current="page" href="about_us.php">Chi siamo?</a>
                         </li>
                         <li class="nav-item ms-lg-2 mt-1" style="cursor: no-drop;">
                             <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">
@@ -46,10 +46,6 @@
                 </div>
             </div>
         </nav>
-
-        <footer class="bg-light fixed-bottom rounded-top text-center shadow container p-2 justify-content-center">
-            <b><?php echo $appName ?></b> by <a target="_blank" href="https://github.com/isisbem">BEM Developers</a>
-        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

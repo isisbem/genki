@@ -12,3 +12,8 @@ body {
 hr {
     background-color: gray;
 }
+
+.img-sm {
+    max-width: 128px;
+    height:auto;
+}

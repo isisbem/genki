@@ -5,7 +5,6 @@
     <head>
         <title><?php echo $appName ?></title>
         <!-- <link rel="shortcut icon" type="image/x-icon" href="media/icon.png" /> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.css">
     </head>
     <body>
         <div class="container">
