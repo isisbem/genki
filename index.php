@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php echo $appName ?></title>
+        <!-- <title><?php echo $appName ?></title> -->
         <!-- <link rel="shortcut icon" type="image/x-icon" href="media/icon.png" /> -->
     </head>
     <body>

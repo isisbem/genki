@@ -9,13 +9,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-        <link href="assets/styles.css" rel="stylesheet">
+        <link href="assets/css/styles.css" rel="stylesheet">
+
+        <!-- <title><?php echo $appName ?></title> -->
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">
-                    <img src="assets/logo.png" height="32" width="42" class="me-2">
+                    <img src="assets/images/logo.png" height="32" width="42" class="me-2">
                     <?php echo $appName ?>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,12 +26,12 @@
                 <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
                     <ul class="navbar-nav ms-auto flex-nowrap">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle <?php echo basename($_SERVER['PHP_SELF']) == 'real-time.php' ? 'active' : '' ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle <?php echo basename($_SERVER['PHP_SELF']) == 'graph.php' ? 'active' : '' ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Grafici
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" aria-current="page" href="real-time.php">Grafico in Tempo Reale</a>
+                                    <a class="dropdown-item" aria-current="page" href="graph.php">Grafico esplorabile</a>
                                 </li>
                             </ul>
                         </li>
