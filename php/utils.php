@@ -1,6 +1,6 @@
 <?php
 
-$appName = 'Progetto Lorem Ipsum';
+$appName = 'Progetto S.E.M.P.';
 $appVersion = 'v1.0.0';
 
 $serverName = '82.223.8.163';
