@@ -18,7 +18,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">
                     <img src="assets/images/logo.png" height="32" width="42" class="me-2">
-                    <?php echo $appName ?>
+                    <?php echo $appCompleteName ?>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

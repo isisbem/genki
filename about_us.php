@@ -15,7 +15,7 @@
                     <div class="card shadow-sm animate__animated animate__fadeInUp animate__faster">
                         <div class="card-body text-center">
                             <img src="assets/placeholder.png" class="rounded-circle img-fluid">
-                            <h2 class="mt-3">Mario Rossi</h2>
+                            <h2 class="mt-3">Matteo Diblas</h2>
                             <p class="text-muted">Idraulico senza frontiere</p>
                             <hr>
                             <ul class="list-inline">
@@ -42,7 +42,7 @@
                     <div class="card shadow-sm animate__animated animate__fadeInDown animate__faster">
                         <div class="card-body text-center">
                             <img src="assets/placeholder.png" class="rounded-circle img-fluid">
-                            <h2 class="mt-3">Mario Rossi</h2>
+                            <h2 class="mt-3">Antonio Iorio</h2>
                             <p class="text-muted">Idraulico senza frontiere</p>
                             <hr>
                             <ul class="list-inline">
@@ -69,7 +69,7 @@
                     <div class="card shadow-sm animate__animated animate__fadeInUp animate__faster">
                         <div class="card-body text-center">
                             <img src="assets/placeholder.png" class="rounded-circle img-fluid">
-                            <h2 class="mt-3">Mario Rossi</h2>
+                            <h2 class="mt-3">Milos Kovacevic</h2>
                             <p class="text-muted">Idraulico senza frontiere</p>
                             <hr>
                             <ul class="list-inline">
@@ -96,7 +96,7 @@
                     <div class="card shadow-sm animate__animated animate__fadeInDown animate__faster">
                         <div class="card-body text-center">
                             <img src="assets/placeholder.png" class="rounded-circle img-fluid">
-                            <h2 class="mt-3">Mario Rossi</h2>
+                            <h2 class="mt-3">Antonino Fardella</h2>
                             <p class="text-muted">Idraulico senza frontiere</p>
                             <hr>
                             <ul class="list-inline">
