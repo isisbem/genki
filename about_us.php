@@ -47,12 +47,12 @@
                             <hr>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <a style="font-size: 32px" href="#" class="text-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" title="GitHub">
+                                    <a style="font-size: 32px" href="https://github.com/antoniognogno" class="text-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" title="GitHub">
                                         <i class="bi bi-github"></i></i>
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a style="font-size: 32px" href="#" class="text-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Instagram">
+                                    <a style="font-size: 32px" href="https://www.instagram.com/_antonioiorio_/" class="text-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Instagram">
                                         <i class="bi bi-instagram"></i></i>
                                     </a>
                                 </li>

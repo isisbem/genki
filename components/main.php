@@ -17,7 +17,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">
-                    <img src="assets/images/logo.png" height="32" width="42" class="me-2">
+                    <img src="assets/images/logo_SEMP.png" height="50" width="50" class="me-2"> <!-- PROVA height & width--> 
                     <?php echo $appCompleteName ?>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

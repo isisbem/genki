@@ -1,7 +1,7 @@
 <?php
 
 $appName = 'Progetto S.E.M.P.';
-$appCompleteName = 'Progetto Simple Environment Monitoring Panel';
+$appCompleteName = 'Simple Environment Monitoring Panel';
 $appVersion = 'v1.0.0';
 
 $serverName = '82.223.8.163';
