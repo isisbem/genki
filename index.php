@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <div class="row d-flex flex-column min-vh-100 justify-content-center align-items-center">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm mt-5">
                     <div class="card-body">
                         <h2 class="card-title text-center"><?php echo $appName ?></h2>
                         <hr>

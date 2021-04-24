@@ -11,7 +11,7 @@ $data = array();
 
 if ($query->num_rows) {
     while ($row = $query->fetch_assoc()) {
-        $data['values'][$row['metrica']][] = floatval($row['valore']);
+        $data['values'][$row['metrica']][] = floatval(number_format($row['valore'], 2));
 
         $date = DateTime::createFromFormat("Y-m-d H:i:s.u", $row['acquisito']);
         $data['dates'][] = $date->format('d/m/Y H:i');
