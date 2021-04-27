@@ -49,10 +49,10 @@
                                 <small class="text-muted float-end">Fonte: <a href="http://genkiproject.org" target="_blank">Genki Project</a></small>
                             </div>
                             <div class="col">
-                                <h5>Come funziona?</h5>
-                                <p>La centralina è connessa al cloud. È dotata di sensori ad alta precisione per la misurazione dell’inquinamento dell’aria. Questo consente l'accesso ai dati in tempo reale.</p>
-                                <h5>Che tecnologie utilizziamo?</h5>
-                                <p>ReliaSENS 18-12 è un sistema robusto e compatto sviluppato per monitorare la temperatura ambiente e i livelli di gas inquinanti, particolato, campi elettromagnetici e radioattività (con un’opzione per l’inquinamento acustico) nelle aree di traffico, nelle zone urbane e industriali e in prossimità di cantieri.</p>
+                                <h5><b>Come funziona?</b></h5>
+                                <p>La centralina è connessa al cloud. È dotata di sensori ad alta precisione per la misurazione <b>dell’inquinamento dell’aria</b>. Questo consente l'accesso ai dati in tempo reale.</p>
+                                <h5><b>Che tecnologie utilizziamo?</b></h5>
+                                <p><b>ReliaSENS 18-12</b> è un sistema robusto e compatto sviluppato per monitorare la temperatura ambiente e i livelli di gas inquinanti, particolato, campi elettromagnetici e radioattività (con un’opzione per l’inquinamento acustico) nelle aree di traffico, nelle zone urbane e industriali e in prossimità di cantieri.</p>
                             </div>
                         </div>
                     </div>
@@ -71,14 +71,18 @@
                                     <div class="accordion-body">
                                         <p>Questo applicativo serve a rendere la lettura dei dati rilevati dalle centraline, in maniera molto più semplice. Oltre alla lettura, questo applicativo, rende disponibili alcune funzionalità come:</p>
                                     
-                                        <h5>• Grafico Esplorabile</h5>
-                                        <p class="px-3">Permette di visualizzare determinati dati in determinati giorni tramite un menù che permette di selezionare data e ora di inizio e data e ora di fine. Questo rende i dati visibili anche graficamente in modo da facilitarne la consultazione.</p>
+                                        <h5><b>• Grafico Esplorabile</b></h5>
+                                        <p class="px-3">Permette di visualizzare determinati dati in determinati giorni tramite un menù che permette di selezionare data e ora di inizio e data e ora di fine. Questo rende i dati visibili anche <b>graficamente in modo da facilitarne la consultazione</b>.</p>
 
-                                        <h5>• Grafico in tempo reale</h5>
-                                        <p class="px-3">Permette di visualizzare i dati della centralina in tempo reale per confrontare eventi atmosferici con le misurazioni effettuate.</p>
+                                        <h5><b>• Grafico in tempo reale</b></h5>
+                                        <p class="px-3">Permette di visualizzare i dati della centralina in <b>tempo reale</b> per confrontare eventi atmosferici con le misurazioni effettuate.</p>
                                         
-                                        <h5>• Download dei dati</h5>
-                                        <p class="px-3">Permette di scaricare i dati rilevati precedentemente dalla centralina sul proprio dispositivo, in questo modo diventano molto più manegievoli e accessibili per l'utilizzo pratico o anche per una visualizzazione più comoda.</p>
+                                        <h5><b>• Download dei dati</b></h5>
+                                        <p class="px-3">Permette di <b>scaricare i dati rilevati precedentemente dalla centralina sul proprio dispositivo</b>, in questo modo diventano molto più maneggievoli e accessibili per l'utilizzo pratico o anche per una visualizzazione più comoda.</p>
+                                        
+                                        <h5><b>• Inserimento Eventi</b></h5>
+                                        <p class="px-3">Permette di <b>inserire degli eventi</b> non rilevati dalla centralina in maniera totalmente manuale dopo aver effettuato <b>l'accesso tramite delle credenziali private</b></p>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +95,7 @@
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
                                         <p>Siamo quattro ragazzi che frequentano la terza superiore, tutti e quattro abbiamo scelto di proseguire gli studi nella ramificazione informatica dell'istituto tecnico <b>I.T.I. Guglielmo Marconi di Staranzano</b>.</p>
-                                        <p>Seguiti dal professor Sandro Pierdomenico abbiamo creato questo applicativo, mettendo insieme le nostre conoscenze, per permettere <b>una lettura e comprensione più semplice dei dati analizzati</b> dalla centralina e anche per sensibilizzare più persone possibili sull'argomento dell'inquinamento atmosferico. Questo sarà possibile tramite degli schermi sparsi per le città con qusta pagina consultabile da chiunque.</p>
+                                        <p>Abbiamo creato questo applicativo, mettendo insieme le nostre conoscenze, per permettere <b>una lettura e comprensione più semplice dei dati analizzati</b> dalla centralina e anche per sensibilizzare più persone possibili sull'argomento <b>dell'inquinamento atmosferico</b>. Questo sarà possibile tramite degli schermi sparsi per le città con qusta pagina consultabile da chiunque.</p>
                                     </div>
                                 </div>
                             </div>
