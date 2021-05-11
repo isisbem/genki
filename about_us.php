@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Genki Management Panel</title>
+        <title><?php echo $appName ?> - Creatori</title>
         <!-- <link rel="shortcut icon" type="image/x-icon" href="media/icon.png" /> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </head>
