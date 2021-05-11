@@ -14,7 +14,7 @@ if ($query->num_rows) {
         $data['values'][$row['metrica']][] = floatval(number_format($row['valore'], 2));
 
         $date = DateTime::createFromFormat("Y-m-d H:i:s.u", $row['acquisito']);
-        $data['dates'][] = $date->format('d/m/Y H:i');
+        $data['dates'][] = $date->format('d/m/Y H:i:s');
     }
 
     $data['dates'] = array_unique($data['dates']);

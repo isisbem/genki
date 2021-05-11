@@ -68,7 +68,7 @@
                 if (!(startDate == undefined && endDate == undefined) && !(startDate == null && endDate == null) && formData.length > 0) { 
                     var finalFormData = []
                     for (var item in formData) {
-                        finalFormData.push(formData[item]['name'])
+                        finalFormData.push(formData[item]['name'].replace(' ', '_'))
                     }
                     var dataString = '"' + finalFormData.join('",%20"') + '"'
 
@@ -77,7 +77,7 @@
                         var graphData = []
                         for (var item in data['values']) {
                             graphData.push({
-                                name: item,
+                                name: item.replace('_', ' '),
                                 'data': data['values'][item]
                             })
                         }
@@ -97,7 +97,7 @@
                         $('#labels').append(`
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="${data[item]}" name="${data[item]}" onchange="$(document).trigger('formItemsUpdated');">
-                                <label class="form-check-label" for="${data[item]}">${data[item]}</label>
+                                <label class="form-check-label" for="${data[item]}">${data[item].replace('_', ' ')}</label>
                             </div>
                         `)
                     }
@@ -108,12 +108,16 @@
                 getGraphData();
             })
 
-            $('#startDate').datetimepicker()
+            $('#startDate').datetimepicker({
+                useCurrent: true
+            })
             .on("dp.change",function() {
                 getGraphData()
             })
 
-            $('#endDate').datetimepicker()
+            $('#endDate').datetimepicker({
+                useCurrent: true
+            })
             .on("dp.change",function() {
                 getGraphData()
             })
