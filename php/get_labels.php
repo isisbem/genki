@@ -13,6 +13,6 @@ if ($query->num_rows) {
     }
 }
 
-echo json_encode($data);
+echo json_encode($data); 
 
 ?>
