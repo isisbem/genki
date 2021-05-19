@@ -3,8 +3,8 @@
 include 'utils.php';
 
 $fields = $_GET['fields'];
-$start = DateTime::createFromFormat("d/m/Y H:i", $_GET['start']);
-$end = DateTime::createFromFormat("d/m/Y H:i", $_GET['end']);
+$start = DateTime::createFromFormat("j/n/Y H:i:s", $_GET['start']);
+$end = DateTime::createFromFormat("j/n/Y H:i:s", $_GET['end']);
 
 $query = $db->query("SELECT * FROM dati WHERE dati.metrica IN (" . $fields . ") AND (dati.acquisito >= \"" . $start->format('Y-m-d H:i') . "\" AND dati.acquisito <= \"" . $end->format('Y-m-d H:i') . "\")");
 $data = array();

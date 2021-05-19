@@ -17,3 +17,7 @@ hr {
     max-width: 128px;
     height:auto;
 }
+
+.datepicker {
+    cursor: pointer;
+}

@@ -6,21 +6,21 @@
         <title><?php echo $appName ?></title> 
         <!-- <link rel="shortcut icon" type="image/x-icon" href="media/icon.png" /> -->
     </head>
-    <body>
+    <body background="assets/images/bg.png">
         <div class="container">
             <div class="row d-flex flex-column min-vh-100 justify-content-center align-items-center">
-                <div class="card shadow-sm mt-5">
+                <div class="card shadow mt-5">
                     <div class="card-body">
                         <h2 class="card-title text-center"><?php echo $appName ?></h2>
                         <hr>
                         <div class="row">
                             <div class="col-6 text-center">
-                                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                <div id="carouselExampleCaptions" class="carousel slide shadow-sm" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     </div>
-                                    <div class="carousel-inner">
+                                    <div class="carousel-inner rounded-3">
                                         <div class="carousel-item active">
                                         <img src="http://genkiproject.org/wp-content/uploads/2020/11/Genki_gorizia.jpg" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
@@ -38,15 +38,15 @@
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
+                                        <span class="visually-hidden">Indietro</span>
                                     </button>
                                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
+                                        <span class="visually-hidden">Avanti</span>
                                     </button>
                                 </div>
                                 <!-- <img src="https://genkiproject.org/wp-content/uploads/2020/11/Genki_gorizia.jpg" class="img-fluid rounded-3 float-start shadow-sm"> -->
-                                <small class="text-muted float-end">Fonte: <a href="http://genkiproject.org" target="_blank">Genki Project</a></small>
+                                <small class="float-start"><span class="text-muted">Fonte:</span> <a href="http://genkiproject.org" target="_blank">Genki Project</a></small>
                             </div>
                             <div class="col">
                                 <h5><b>Come funziona?</b></h5>
@@ -55,12 +55,9 @@
                                 <p><b>ReliaSENS 18-12</b> è un sistema robusto e compatto sviluppato per monitorare la temperatura ambiente e i livelli di gas inquinanti, particolato, campi elettromagnetici e radioattività (con un’opzione per l’inquinamento acustico) nelle aree di traffico, nelle zone urbane e industriali e in prossimità di cantieri.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card shadow-sm mt-5 mb-5">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">Domande Frequenti</h2>
-                        <div class="accordion mt-3 mb-3" id="accordionFlushExample">
+                        <hr>
+                        <h2 class="card-title text-center mt-3">Domande Frequenti</h2>
+                        <div class="accordion mt-3 mb-3 shadow-sm" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -113,7 +110,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </body>
 </html>
 

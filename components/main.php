@@ -5,7 +5,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- <meta name="description" content=""> -->
+        <link rel="icon" type="image/png" href="assets/images/logo_SEMP.png" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
@@ -14,10 +15,10 @@
         <!-- <title><?php echo $appName ?></title> -->
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">
-                    <img src="assets/images/logo_SEMP.png" height="50" width="50" class="me-2"> <!-- PROVA height & width--> 
+                    <img src="assets/images/logo_SEMP.png" height="40" width="40" class="me-2"> <!-- PROVA height & width--> 
                     <?php echo $appCompleteName ?>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

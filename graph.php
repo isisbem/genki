@@ -4,24 +4,31 @@
 <html>
     <head>
         <title><?php echo $appName ?> - Grafico</title>
-        <!-- <link rel="shortcut icon" type="image/x-icon" href="media/icon.png" /> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css">
-        <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     </head>
     <body>
         <div class="container">
-            <div class="row d-flex flex-column min-vh-100 justify-content-center align-items-center">
-                <div class="col-10 card shadow-sm mt-5 mb-5">
+            <div class="row d-flex flex-column min-vh-100 justify-content-center align-items-center" style="margin-top: 8rem;">
+                <div class="col-12 card shadow-sm mb-5">
                     <div class="card-body">
                         <div class="card-title">
-                            <h4 class="text-center">Grafico rilevamenti</h4>
+                            <h3 class="text-center">Grafico rilevamenti</h3>
                             <hr>
                             <div class="float-right">
-                                <div class="input-group">
-                                    <span class="input-group-text input-group-sm">Dal</span>
-                                    <input type="text" aria-label="Data inizio" class="form-control" placeholder="Data inizio" id="startDate">
-                                    <span class="input-group-text input-group-sm">fino al</span>
-                                    <input type="text" aria-label="Data fine" class="form-control" placeholder="Data fine" id="endDate">
+                                <div class="d-flex">
+                                    <div class="input-group me-3">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <i class="bi bi-calendar4-event"></i>
+                                        </span>
+                                        <input type="text" class="form-control datepicker" placeholder="Clicca per selezionare la data d'inizio..." aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <i class="bi bi-calendar4-event"></i>
+                                        </span>
+                                        <input type="text" class="form-control datepicker" placeholder="Clicca per selezionare la data di fine..." aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                    </div>
                                 </div>
                                 <form class="mt-3" id="labels">
                                     <h5 class="me-2">Dati da visualizzare:</h5>
@@ -36,12 +43,24 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-        <script src="https://use.fontawesome.com/b1676211a8.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/it.min.js" integrity="sha512-abyAPza1Q/3PRl2L54rOvygrx/XIkupvWrs7sNm+jD6gfNf3+MEvPJzdSG4LyYWSTA8NY7AnTCnRz5NNyvsg0w==" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js"></script>
-        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
         <script>
+            const options = {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+                altInput: true,
+                altFormat: "j F Y, H:i",
+                dateFormat: "Y-m-d",
+                locale: "it",
+            }
+
+            const picker = flatpickr(".datepicker", {
+                onChange: (selectedDates, dateStr, instance) => {
+                    getGraphData()
+                }, ...options,
+            });
+
             var baseOptions = {
                 chart: {
                     type: 'line'
@@ -54,16 +73,26 @@
                     tooltip: {
                         enabled: false
                     }
+                },
+                legend: {
+                    showForSingleSeries: false,
+                    showForNullSeries: false,
+                    showForZeroSeries: false,
+                    onItemClick: {
+                        toggleDataSeries: false
+                    },
+                    onItemHover: {
+                        highlightDataSeries: true
+                    },
                 }
             }
 
             var graph = new ApexCharts(document.querySelector("#graph"), baseOptions);
-
             graph.render();
 
             function getGraphData() {
-                var startDate = $('#startDate').data("DateTimePicker").date()
-                var endDate = $('#endDate').data("DateTimePicker").date()
+                startDate = picker[0].selectedDates[0];
+                endDate = picker[1].selectedDates[0];
                 var formData = $('#labels').serializeArray()
                 if (!(startDate == undefined && endDate == undefined) && !(startDate == null && endDate == null) && formData.length > 0) { 
                     var finalFormData = []
@@ -72,7 +101,7 @@
                     }
                     var dataString = '"' + finalFormData.join('",%20"') + '"'
 
-                    $.get(`php/get_data.php?fields=${dataString}&start=${encodeURI(startDate._i)}&end=${encodeURI(endDate._i)}`, function (data) {
+                    $.get(`php/get_data.php?fields=${dataString}&start=${encodeURI(`${startDate.toLocaleDateString()} ${startDate.toLocaleTimeString()}`)}&end=${encodeURI(`${endDate.toLocaleDateString()} ${endDate.toLocaleTimeString()}`)}`, function (data) {
 
                         var graphData = []
                         for (var item in data['values']) {
@@ -89,9 +118,6 @@
             }
 
             $(document).ready(function() {
-                $('#startDate').datetimepicker();
-                $('#endDate').datetimepicker();
-
                 $.get('php/get_labels.php', function (data) {
                     for (var item in data) {
                         $('#labels').append(`
@@ -106,20 +132,6 @@
 
             $(document).on('formItemsUpdated', function(event) {
                 getGraphData();
-            })
-
-            $('#startDate').datetimepicker({
-                useCurrent: true
-            })
-            .on("dp.change",function() {
-                getGraphData()
-            })
-
-            $('#endDate').datetimepicker({
-                useCurrent: true
-            })
-            .on("dp.change",function() {
-                getGraphData()
             })
             </script>
     </body>
